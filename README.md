@@ -1,25 +1,25 @@
-# mcp-ws
+# mcp-ws-pipe
 
 A CLI tool to connect local stdio (standard input/output) to a remote WebSocket server.
 
 ## Overview
 
-`mcp-ws` is designed to be complementary to [ws-mcp](https://github.com/nick1udwig/ws-mcp), which wraps stdio MCP servers with websockets. This tool provides the client-side functionality, allowing you to connect to those websocket servers from your terminal.
+`mcp-ws-pipe` is designed to be complementary to [ws-mcp](https://github.com/nick1udwig/ws-mcp), which wraps stdio MCP servers with websockets. This tool provides the client-side functionality, allowing you to connect to those websocket servers from your terminal.
 
-Unlike [wscat](https://github.com/websockets/wscat), `mcp-ws` doesn't output prompts like `>` and `<` which can confuse MCP clients.
+Unlike [wscat](https://github.com/websockets/wscat), `mcp-ws-pipe` doesn't output prompts like `>` and `<` which can confuse MCP clients.
 
 ## Installation
 
 ### Using pip
 
 ```bash
-pip install mcp-ws
+pip install mcp-ws-pipe
 ```
 
 ### Using UVX
 
 ```bash
-uvx install mcp-ws
+uvx install mcp-ws-pipe
 ```
 
 ## Usage
@@ -27,15 +27,15 @@ uvx install mcp-ws
 ### Standard Usage
 
 ```bash
-mcp-ws wss://example.com/socket
+mcp-ws-pipe wss://example.com/socket
 ```
 
 With additional headers:
 
 ```bash
-mcp-ws wss://example.com/socket --headers '{"Authorization": "Bearer token"}'
+mcp-ws-pipe wss://example.com/socket --headers '{"Authorization": "Bearer token"}'
 # or using the short form
-mcp-ws wss://example.com/socket -H '{"Authorization": "Bearer token"}'
+mcp-ws-pipe wss://example.com/socket -H '{"Authorization": "Bearer token"}'
 ```
 
 ### Direct UVX Execution
@@ -43,13 +43,13 @@ mcp-ws wss://example.com/socket -H '{"Authorization": "Bearer token"}'
 Run the tool directly with UVX without installing it first:
 
 ```bash
-uvx mcp-ws wss://example.com/socket
+uvx mcp-ws-pipe wss://example.com/socket
 ```
 
 With additional headers:
 
 ```bash
-uvx mcp-ws wss://example.com/socket --headers '{"Authorization": "Bearer token"}'
+uvx mcp-ws-pipe wss://example.com/socket --headers '{"Authorization": "Bearer token"}'
 ```
 
 ## Features
@@ -64,13 +64,13 @@ uvx mcp-ws wss://example.com/socket --headers '{"Authorization": "Bearer token"}
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd mcp-ws
+cd mcp-ws-pipe
 
 # Install dependencies
 uv pip install -e .
 
 # Run the application
-python -m mcp_ws <websocket-url>
+python -m mcp_ws_pipe <websocket-url>
 ```
 
 ## License
