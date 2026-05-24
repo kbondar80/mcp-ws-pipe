@@ -1,6 +1,6 @@
 #!/bin/sh
 # Run like this:
-# ./test-input.sh | uvx mcp-ws wss://example.com/mcp
+# ./test-input.sh | uvx mcp-ws-pipe wss://example.com/mcp
 
 # This script sends a series of MCP messages to the WebSocket server.
 # It first sends an initialize message, then waits for 2 seconds,

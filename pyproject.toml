@@ -1,14 +1,14 @@
 [project]
-name = "mcp-ws"
+name = "mcp-ws-pipe"
 version = "0.1.5"
-description = "CLI tool to connect local stdio to a remote WebSocket server"
+description = "CLI tool to connect local stdio (or a child process's stdio) to a remote WebSocket server"
 requires-python = ">=3.12"
 dependencies = [
     "websockets>=13.0",
 ]
 
 [project.scripts]
-mcp-ws = "mcp_ws.__main__:main"
+mcp-ws-pipe = "mcp_ws_pipe.__main__:main"
 
 [build-system]
 requires = ["hatchling"]
